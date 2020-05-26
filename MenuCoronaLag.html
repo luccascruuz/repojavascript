@@ -1,108 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <h1>porra</h1>
     <meta charset="UTF-8">
     <title>Corona em Lagarto</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            font-family: 'Oswald', sans-serif;
-            background-color: lightgray;
-        }
-        .cabecalho {
-            display: flexbox;
-            background: #000;
-            border-bottom: solid 5px #ff0000;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            display: inline-block;
-            height: 80px;
-            padding: 15px;
-        }
-
-        .logo img {
-            height: 100%;
-        }
-
-        .menu-toggle {
-            float: right;
-            color: #eee;
-            background-color: #555;
-            border: solid 1px #777;
-            border-radius: 5px;
-            height: 40px;
-            padding: 10px 20px;
-            margin: 20px 15px;
-        }
-        
-        .menu {
-            display: inline-block;
-            vertical-align: top;
-            height: 80px;
-            padding: 18px;
-        }
-
-        .menu ul {
-            display: flexbox;
-        }
-
-        .menu li {
-            display: inline-block;
-        }
-
-        .cabecalho a {
-            text-decoration: none;
-            color: #eee;
-            font-size: 1.3em;
-        }
-
-        .menu a {
-            padding: 15px;
-        }
-
-        .autenticacao {
-            float: right;
-            height: 80px;
-            padding: 25px;
-        }
-
-        .menu a:hover, .menu a.selected {
-            background-color: #ff0000;
-            color: #000
-        }
-
-        .botao {
-            border-radius: 30px;
-            padding: 10px 25px;
-            margin: 10px;
-        }
-
-        .destaque {
-            background: #ff0000;
-            color: #fff;
-        }
-
-        @media(min-width: 679px) {
-            .menu-toggle {
-                display: none;
-            }
-        }
-
-        @media(max-width: 680px) {
-            .menu {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="CSSCoronaLagarto.css">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['line']});
@@ -113,24 +16,31 @@
       var data = new google.visualization.DataTable();
       data.addColumn('number', 'Day')
       data.addColumn('number', 'Número de curados')
-      data.addColumn('number', 'Número de contaminados')
-      data.addColumn('number', 'Número de óbitos');
+      data.addColumn('number', 'Número de óbitos')
+      data.addColumn('number', 'Número de contaminados');
 
       data.addRows([
-        [1,  0, 1, 0],
-        [2,  0, 3, 0],
-        [3,  1,  9, 0],
-        [4,  1, 15, 1],
-        [5,  2, 22, 1],
-        [6,   4, 26,  2],
-        [7,   5, 29,  2],
-        [8,  5, 42, 4],
-        [9,  9, 56, 8],
-        [10, 12, 59, 9],
-        [11,  16,  65,  11],
-        [12,  26,  88,  16],
-        [13,  28,  93,  17],
-        [14,  35,  104,  22]
+        [1,  0, 0, 1],
+        [5,  0, 0, 2],
+        [12,  0,  0, 7],
+        [13,  1, 0, 8],
+        [14,  1, 0, 11],
+        [16,   1, 0, 13],
+        [18, 2, 0, 13],
+        [19, 2, 1, 17],
+        [23,  3, 1, 18],
+        [24, 4, 2, 25],
+        [25,  6,  2,  25],
+        [26,  9,  2,  27],
+        [27,  9,  2,  29],
+        [28,  10,  2,  29],
+        [29, 13,2, 31],
+        [31, 15, 2, 32],
+        [34, 45, 2, 95],
+        [35, 46, 2, 99],
+        [37, 51, 2, 110],
+        [38, 53, 2, 118],
+        [39, 55, 2, 118]
       ]);
 
       var options = {
